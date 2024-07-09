@@ -1,24 +1,3 @@
-output "windows_vm_hostnames" {
-  description = "Hostnames of the Windows VMs"
-  value       = azurerm_windows_virtual_machine.virtual_machine[*].name
-}
-
-output "windows_vm_fqdns" {
-  description = "FQDNs of the Windows VMs"
-  value       = azurerm_public_ip.public_ip[*].fqdn
-}
-
-output "windows_vm_private_ips" {
-  description = "Private IP addresses of the Windows VMs"
-  value       = azurerm_network_interface.nic[*].private_ip_address
-}
-
-output "windows_vm_public_ips" {
-  description = "Public IP addresses of the Windows VMs"
-  value       = azurerm_public_ip.public_ip[*].ip_address
-}
-
-output "windows_vm_ids" {
-  description = "Resource IDs of the Windows VMs"
-  value       = [for vm in azurerm_windows_virtual_machine.virtual_machine : vm.id]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:47c225ea9b724285e8ceb5e41449f8a93da78ae9b343978c03696e589922a0f6
+size 756

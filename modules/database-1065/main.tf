@@ -1,24 +1,3 @@
-resource "azurerm_postgresql_server" "db" {
-  name                             = "${var.humber_id}-psql-server"
-  location                         = var.location
-  resource_group_name              = var.resource_group_name
-  administrator_login              = var.admin_username
-  administrator_login_password     = var.admin_password
-  sku_name                         = "B_Gen5_1"
-  storage_mb                       = 5120
-  backup_retention_days            = 7
-  geo_redundant_backup_enabled     = false
-  auto_grow_enabled                = true
-  version                          = var.postgresql_version
-  ssl_enforcement_enabled          = var.ssl_enforcement_enabled
-
-  tags = var.tags
-}
-
-resource "azurerm_postgresql_database" "db" {
-  name                = "db-1065"
-  resource_group_name = var.resource_group_name
-  server_name         = azurerm_postgresql_server.db.name
-  charset             = "UTF8"
-  collation           = "English_United States.1252"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ef15ccba30f9e069522decec718a7a9a62272a66c0266d728578113b4daf1272
+size 968

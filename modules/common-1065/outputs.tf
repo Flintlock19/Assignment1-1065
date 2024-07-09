@@ -1,15 +1,3 @@
-output "log_analytics_workspace_name" {
-  description = "The name of the Log Analytics Workspace"
-  value       = azurerm_log_analytics_workspace.log_analytics.name
-}
-
-output "recovery_services_vault_name" {
-  description = "The name of the Recovery Services Vault"
-  value       = azurerm_recovery_services_vault.recovery_vault.name
-}
-
-output "storage_account_name" {
-  description = "The name of the Storage Account"
-  value       = azurerm_storage_account.storage.name
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:2d8437047ad35220e9721f44a7ec2948b71edfa6bb046de78ba6b1c9da0e2c43
+size 475

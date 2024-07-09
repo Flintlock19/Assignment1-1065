@@ -1,19 +1,3 @@
-
-variable "location" {
-  description = "Azure location for the common resources"
-  type        = string
-}
-
-variable "resource_group_name" {
-  description = "Name of the resource group"
-  type        = string
-}
-
-locals {
-  common_tags = {
-    Assignment     = "CCGC 5502 Automation Assignment"
-    Name           = "bhargav.kavade"
-    ExpirationDate = "2024-12-31"
-    Environment    = "Learning"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c807faeccebb2006133dd9008267c74f776ff008dd5ad63303c5029e517c50d8
+size 403

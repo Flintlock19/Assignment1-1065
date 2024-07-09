@@ -1,23 +1,3 @@
-variable "humber_id" {
-  description = "The Humber ID for naming resources"
-  type        = string
-}
-
-variable "location" {
-  description = "The Azure region where the resources will be created"
-  type        = string
-}
-
-variable "resource_group_name" {
-  description = "The name of the resource group"
-  type        = string
-}
-
-variable "linux_vm_nic_ids" {
-  description = "List of network interface IDs for Linux VMs"
-  type        = list(string)
-}
-variable "tags" {
-  description = "Tags to apply to the resources"
-  type        = map(string)
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d29c87ebebd7e7aeff7ac7773ac8efd68dc1ef0827bec866d6d73df1ac1fe962
+size 549

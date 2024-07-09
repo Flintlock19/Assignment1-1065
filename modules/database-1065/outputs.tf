@@ -1,9 +1,3 @@
-output "postgresql_server_name" {
-  description = "Name of the PostgreSQL server instance"
-  value       = azurerm_postgresql_server.db.name
-}
-
-output "postgresql_database_name" {
-  description = "Name of the PostgreSQL database"
-  value       = azurerm_postgresql_database.db.name
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5c9b3583a157489e937e751f9fedf57b92bd972f7537b45cd1d6949fb14ada20
+size 284

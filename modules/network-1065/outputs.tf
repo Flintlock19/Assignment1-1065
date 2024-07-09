@@ -1,14 +1,3 @@
-output "virtual_network_name" {
-  description = "Name of the virtual network"
-  value       = azurerm_virtual_network.vnet.name
-}
-
-output "subnet_name" {
-  description = "Name of the subnet"
-  value       = azurerm_subnet.subnet.name
-}
-
-output "subnet_id" {
-  description = "ID of subnet"
-  value       = azurerm_subnet.subnet.id
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3ea499d72b1cf1bb9c8d014b52c99edecf6f43f86886f08fd32a5620902c65b7
+size 332

@@ -1,8 +1,3 @@
-terraform {
-  backend "azurerm" {
-    resource_group_name  = "tfstateN01651065RG"
-    storage_account_name = "tfstaten01651065sa"
-    container_name       = "tfstatefiles"
-    key                  = "terraform.tfstate"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c976617b7d787cb17b6b19c1d7d45b4bb5294986c6cb8ff3901015b67ee53259
+size 225
