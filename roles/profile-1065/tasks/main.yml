@@ -1,0 +1,18 @@
+# profile-HumberID/tasks/main.yml
+---
+- name: Ensure /etc/profile has the Test block
+  lineinfile:
+    path: /etc/profile
+    line: "#Test block added by Ansible……N01651065"
+    create: yes
+    state: present
+    insertafter: EOF
+
+- name: Set TMOUT environment variable
+  lineinfile:
+    path: /etc/profile
+    line: 'export TMOUT=1500'
+    create: yes
+    state: present
+    insertafter: '#Test block added by Ansible……N01651065'
+

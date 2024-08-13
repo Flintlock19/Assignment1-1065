@@ -1,0 +1,30 @@
+---
+- name: Ensure cloudadmins group exists
+  group:
+    name: cloudadmins
+    state: present
+
+- name: Create users and add to cloudadmins and wheel groups
+  user:
+    name: "{{ item }}"
+    group: cloudadmins
+    groups: wheel
+    append: yes
+    state: present
+    generate_ssh_key: yes
+    ssh_key_bits: 2048
+    ssh_key_file: "/home/{{ item }}/.ssh/id_rsa"
+    ssh_key_passphrase: ""
+  with_items:
+    - user100
+    - user200
+    - user300
+
+- name: Download private key for user100 from VM1
+  fetch:
+    src: /home/user100/.ssh/id_rsa
+    dest: /home/N01651065/automation/ansible/user100_id_rsa
+    flat: yes
+  delegate_to: linux-vm1-1065.eastus.cloudapp.azure.com
+  when: inventory_hostname == "linux-vm1-1065.eastus.cloudapp.azure.com"
+

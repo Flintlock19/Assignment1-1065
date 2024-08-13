@@ -1,0 +1,19 @@
+# webserver-HumberID/tasks/main.yml
+---
+- name: Install Apache web server
+  ansible.builtin.package:
+    name: httpd
+    state: present
+
+- name: Create HTML files with FQDN
+  ansible.builtin.template:
+    src: "vm.html.j2"
+    dest: "/var/www/html/index.html"
+    mode: '0444'
+
+- name: Ensure Apache is enabled and started
+  ansible.builtin.service:
+    name: httpd
+    state: started
+    enabled: yes
+  notify: restart apache

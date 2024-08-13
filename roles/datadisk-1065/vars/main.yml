@@ -1,0 +1,8 @@
+# vars/main.yml
+partition1_start: "1MiB"
+partition1_end: "5GiB"
+partition2_start: "6GiB"
+partition2_end: "100%"
+
+mount_point1: "/part1"
+mount_point2: "/part2"
